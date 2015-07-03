@@ -8,7 +8,9 @@
 		event.stopPropagation()
 
 	close: ->
-		alert 'Close the modal!'
+		AppDispatcher.dispatch
+			actionType: "ACCEPT_TERMS"
+			accepted: true
 
 	componentDidMount: ->
 		document.addEventListener('keydown', this._handleKeyDown, false)
@@ -19,7 +21,7 @@
 	render: ->
 		<div className="modal-background" onClick={ this.close }>
 			<div className="modal-window" onClick={ this.stopPropagation }>
-				<p>This is some content</p>
-				<Button onClick={ this.close } text="OK" />
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel placerat libero. Aliquam sed convallis odio.</p>
+				<Button onClick={ this.close } text="I accept the terms and conditions" />
 			</div>
 		</div>
