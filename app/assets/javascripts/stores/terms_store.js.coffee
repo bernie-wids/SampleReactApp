@@ -8,11 +8,11 @@ class TermsStore extends EventEmitter
 			when 'ACCEPT_TERMS'
 				Terms.setAccepted(payload.accepted)
 
-		setAccepted: (data) =>
-			@_accepted = data
-			@emit('TERMS_CHANGE')
+	setAccepted: (data) =>
+		@_accepted = data
+		@emit('TERMS_CHANGE')
 
-		accepted: =>
-			@_accepted == true
+	accepted: =>
+		@_accepted == true
 
 window.Terms = new TermsStore()
