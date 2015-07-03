@@ -2,7 +2,7 @@ class TermsStore extends EventEmitter
 
 	_accepted: false
 
-	dispatchToken = AppDispatcher.register(payload) ->
+	dispatchToken = AppDispatcher.register (payload) ->
 
 		switch payload.actionType
 			when 'ACCEPT_TERMS'
