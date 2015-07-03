@@ -4,4 +4,7 @@
 		alert 'You clicked the DemoApp.onClick handler'
 
 	render: ->
-		<Button text="Super Button" onClick={ this.onClick } />
+		<div>
+			<h1>Sample React.js demo in Rails</h1>
+			<Button text="Super Button" onClick={ this.onClick } />
+		</div>
