@@ -7,4 +7,5 @@
 		<div>
 			<h1>Sample React.js demo in Rails</h1>
 			<Button text="Super Button" onClick={ this.onClick } />
+			<Modal />
 		</div>
